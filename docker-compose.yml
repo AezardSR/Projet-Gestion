@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3030:3000"  # Mappe le port 3000 du conteneur au port 3030 de la machine hôte
+    volumes:
+      - .:/app  # Monte le répertoire actuel dans le conteneur
+      - /app/node_modules  # Évite de monter node_modules de l'hôte
+    environment:
+      - NODE_ENV=development
