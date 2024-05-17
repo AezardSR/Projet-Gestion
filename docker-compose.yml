@@ -2,6 +2,7 @@ version: '3'
 services:
   web:
     build: .
+    container_name: projet-gestion-game-web
     ports:
       - "3030:3000"  # Mappe le port 3000 du conteneur au port 3030 de la machine hôte
     volumes:
